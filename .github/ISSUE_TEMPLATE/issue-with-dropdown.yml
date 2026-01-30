@@ -1,0 +1,51 @@
+---
+name: "Submeter Problema"
+description: "Submeter um novo problema com menus dropdown para prioridade, categoria e produto."
+title: "[Issue] "
+labels: []
+assignees: []
+body:
+  - type: dropdown
+    id: category
+    attributes:
+      label: "Categoria"
+      description: "Selecione a categoria que melhor descreve este problema"
+      multiple: false
+      options:
+        - "Relatório de Bug"
+        - "Solicitação de Funcionalidade"
+        - "Documentação"
+        - "Melhoria"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: product
+    attributes:
+      label: "Produto"
+      description: "Selecione o produto a que este problema está relacionado"
+      multiple: false
+      options:
+        - "Firmware PT (LusoFW)"
+        - "Website MeshCore Portugal"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: "Descrição"
+      description: "Descreva o problema"
+      placeholder: "Forneça uma descrição clara do problema.."
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional-info
+    attributes:
+      label: "Informação Adicional"
+      description: "Informação Adicional"
+      placeholder: "Adicione capturas de ecrã, logs ou informações adicionais aqui.."
+    validations:
+      required: false
+---
