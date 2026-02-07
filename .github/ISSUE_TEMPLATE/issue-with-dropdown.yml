@@ -26,7 +26,7 @@ body:
       description: "Selecione o produto a que este problema está relacionado"
       multiple: false
       options:
-        - "Firmware PT (LusoFW)"
+        - "Firmware MeshCore Portugal"
         - "Website MeshCore Portugal"
     validations:
       required: true
